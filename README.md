@@ -54,6 +54,29 @@ int main(int argc, char *argv[]) {
 
 ```
 
+If this runs successfully you can also try:
+
+```
+#include <SDL.h>
+#include <iostream>
+
+int main(int argc, char *argv[]) {
+
+	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+		std::cout << "SDL Init Failed!" << std::endl;
+		return 1;
+	}
+
+	std::cout << "SDL Init succeeded!" << std::endl;
+
+	SDL_Quit();
+
+	return 0;
+}
+```
+
+This will ensure SDL is callable and initialising correctly.
+
 14. Build your project and run the `exe`:
 
 ```
